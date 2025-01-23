@@ -44,7 +44,13 @@ public class App {
                 System.out.println("\nInforme o valor que deseja Tirar sua conta: ");
                 valorDecrescimo = input.nextDouble();
 
-                saldoInicial -= valorDecrescimo;
+                if ( saldoInicial > valorDecrescimo){
+                    
+                    saldoInicial -= valorDecrescimo;
+
+                }else {
+                    System.out.println("\nNão há saldo o suficiente para essa transação! ");
+                }
 
                 System.out.println(String.format("\nSeu saldo agora é: R$ %.2f\n", saldoInicial));
 
